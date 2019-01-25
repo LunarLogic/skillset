@@ -5,6 +5,7 @@ defmodule Skillset.People.Person do
 
   schema "people" do
     field :name, :string
+    has_many :insights, Skillset.Knowledge.Insight
 
     timestamps()
   end

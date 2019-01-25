@@ -12,7 +12,11 @@
 <%= for person <- @people do %>
     <tr>
       <td><%= person.name %></td>
-
+      <td>
+        <%= for insight <- person.insights do %>
+          <%= insight.skill.name %>
+        <% end%>
+      </td>
       <td>
         <%= link "Show", to: Routes.person_path(@conn, :show, person) %>
         <%= link "Edit", to: Routes.person_path(@conn, :edit, person) %>
