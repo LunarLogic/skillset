@@ -19,6 +19,7 @@ defmodule SkillsetWeb.Router do
     get "/", PageController, :index
     resources "/people", PersonController
     resources "/skills", SkillController
+    resources "/insights", InsightController
   end
 
   # Other scopes may use custom stacks.

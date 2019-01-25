@@ -1,0 +1,20 @@
+<h1>Listing Insights</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for insight <- @insights do %>
+    <tr>
+      <td><%= insight.id %></td>
+      <td><%= insight.person_id %></td>
+
+    </tr>
+<% end %>
+  </tbody>
+</table>
