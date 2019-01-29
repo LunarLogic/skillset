@@ -18,7 +18,7 @@ defmodule Skillset.People do
 
   """
   def list_people do
-    Person |> Repo.all() |> Repo.preload(insights: [:skill])
+    Person |> Repo.all() |> Repo.preload(insights: [:skill], interests: [:skill])
   end
 
   @doc """

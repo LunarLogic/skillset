@@ -4,8 +4,8 @@
   <thead>
     <tr>
       <th>Name</th>
-
-      <th></th>
+      <th>Knows</th>
+      <th>Wants to learn</th>
     </tr>
   </thead>
   <tbody>
@@ -13,6 +13,7 @@
     <tr>
       <td><%= person.name %></td>
       <td><%= skills_for_person(person) %></td>
+      <td><%= skills_to_learn_for_person(person) %></td>
       <td>
         <%= link "Show", to: Routes.person_path(@conn, :show, person) %>
         <%= link "Edit", to: Routes.person_path(@conn, :edit, person) %>
